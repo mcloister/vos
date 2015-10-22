@@ -3,20 +3,27 @@ using System.Collections;
 
 public class Rotator : MonoBehaviour {
 
+	//private float angVel;
 	public Color lerpedColor = Color.white;
+	public Renderer rend;
+	private Rigidbody rb;
+	public float speed;
+	private float rotationalForce;
 
 	// Use this for initialization
 	void Start () {
-		GetComponent<SpriteRenderer>().color = lerpedColor;
+		rend = GetComponent<Renderer>();
+		rb = GetComponent<Rigidbody> ();
 	}
 
-	public float speed = 1;
-	
+
 	// Update is called once per frame
 	void Update () {
-		transform.Rotate (new Vector3 (0, 0, 30) * Time.deltaTime * speed);
-		lerpedColor = Color.Lerp(Color.white, Color.black, speed);
-
+		rotationalForce = Input.GetAxis ("Horizontal") * speed;
+		transform.Rotate (new Vector3 (0, 0, 30) * rotationalForce);
+		lerpedColor = Color.Lerp(Color.white, Color.black, Mathf.Abs(rotationalForce));
+		rend.material.color = lerpedColor;
+		//angVel = rb.angularVelocity.magnitude;
 	}
 
 }
