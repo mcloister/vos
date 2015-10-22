@@ -74,6 +74,8 @@
 'Assets/OSC/OSCPacket.cs'
 'Assets/OSC/OSCServer.cs'
 'Assets/OSCHandler.cs'
+'Assets/Scripts/Mover.cs'
 'Assets/Scripts/Rotator.cs'
+'Assets/Shooter.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'

@@ -52,7 +52,9 @@
      <Compile Include="Assets\OSC\OSCPacket.cs" />
      <Compile Include="Assets\OSC\OSCServer.cs" />
      <Compile Include="Assets\OSCHandler.cs" />
+     <Compile Include="Assets\Scripts\Mover.cs" />
      <Compile Include="Assets\Scripts\Rotator.cs" />
+     <Compile Include="Assets\Shooter.cs" />
      <None Include="Assets\Utility Shaders Free\Shaders\USV1 Preview Blur.shader" />
      <None Include="Assets\Utility Shaders Free\Shaders\USV1 Preview DBlur.shader" />
      <None Include="Assets\Utility Shaders Free\Shaders\USV1 Preview Distort Texture.shader" />
