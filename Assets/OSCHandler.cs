@@ -98,7 +98,7 @@ public class OSCHandler : MonoBehaviour
         //Initialize OSC servers (listeners)
         //Example:
 
-        //CreateServer("AndroidPhone", 6666);
+        CreateServer("PD", 12000);
 	}
 	
 	#region Properties
