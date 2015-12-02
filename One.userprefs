@@ -1,9 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../Downloads/UnityOSC-master-2/tests/touchosc_integration/Assets/oscControl.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Rotator.cs">
     <Files>
-      <File FileName="../../../Downloads/UnityOSC-master-2/tests/touchosc_integration/Assets/OSCHandler.cs" Line="104" Column="20" />
-      <File FileName="../../../Downloads/UnityOSC-master-2/tests/touchosc_integration/Assets/oscControl.cs" Line="39" Column="1" />
+      <File FileName="../../../Downloads/UnityOSC-master-2/tests/touchosc_integration/Assets/OSCHandler.cs" Line="100" Column="5" />
+      <File FileName="../../../Downloads/UnityOSC-master-2/tests/touchosc_integration/Assets/oscControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/OSCHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets/Shooter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Rotator.cs" Line="24" Column="53" />
+      <File FileName="Assets/Scripts/OSCControl.cs" Line="65" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

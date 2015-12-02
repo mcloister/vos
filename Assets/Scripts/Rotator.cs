@@ -21,7 +21,8 @@ public class Rotator : MonoBehaviour {
 	void FixedUpdate () {
 		rotationalForce = Input.GetAxis ("Horizontal") * speed * Time.deltaTime;
 		//transform.Rotate (new Vector3 (0, 0, 30) * rotationalForce);
-		Debug.Log ("torque: " + transform.up * rotationalForce);
+		Debug.Log ("input: " + Input.GetAxis("Horizontal") * Time.deltaTime);
+		//Debug.Log ("torque: " + transform.up * rotationalForce);
 		rb.AddTorque (transform.up * rotationalForce);
 		//lerpedColor = Color.Lerp(Color.white, Color.black, Mathf.Abs(rotationalForce));
 		//rend.material.color = lerpedColor;
