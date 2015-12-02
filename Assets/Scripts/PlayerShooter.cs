@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Shooter : MonoBehaviour {
+public class PlayerShooter : MonoBehaviour {
 
 	public GameObject ball;
 	public Transform ballSpawn;

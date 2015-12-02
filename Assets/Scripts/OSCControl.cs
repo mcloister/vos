@@ -25,21 +25,24 @@ using System.Collections.Generic;
 using System.Text;
 using UnityOSC;
 
-public class oscControl : MonoBehaviour {
+public class OSCControl : MonoBehaviour {
 	
 	private Dictionary<string, ServerLog> servers;
-	public GameObject cube;
+	public GameObject vinyl;
+	private Vector3 rotation = new Vector3 (0,0,0);
+	private float xWaxPitch = 0;
+
 	// Script initialization
 	void Start() {	
 		OSCHandler.Instance.Init(); //init OSC
 		servers = new Dictionary<string, ServerLog>();
-		cube = GameObject.Find ("Vinyl");
+		vinyl = GameObject.Find ("Vinyl");
 	}
 	
 	// NOTE: The received messages at each server are updated here
 	// Hence, this update depends on your application architecture
 	// How many frames per second or Update() calls per frame?
-	void Update() {
+	void FixedUpdate() {
 		
 		OSCHandler.Instance.UpdateLogs();
 		
@@ -54,17 +57,21 @@ public class oscControl : MonoBehaviour {
 			if (item.Value.log.Count > 0) {
 				int lastPacketIndex = item.Value.packets.Count - 1;
 				
-				UnityEngine.Debug.Log (String.Format ("SERVER: {0} ADDRESS: {1} VALUE : {2}", 
-				                                      item.Key, // Server name
-				                                      item.Value.packets [lastPacketIndex].Address, // OSC address
-				                                      item.Value.packets [lastPacketIndex].Data [0].ToString ())); //First data value
-				
-				//converts the values into MIDI to scale the cube
-				float tempVal = float.Parse (item.Value.packets [lastPacketIndex].Data [0].ToString ());
-				cube.transform.localScale = new Vector3 (tempVal, tempVal, tempVal);
-//				cube.transform.up = rotationalForce);
+//				UnityEngine.Debug.Log (String.Format ("SERVER: {0} ADDRESS: {1} VALUE : {2}", 
+//				                                      item.Key, // Server name
+//				                                      item.Value.packets [lastPacketIndex].Address, // OSC address
+//				                                      item.Value.packets [lastPacketIndex].Data [0].ToString ())); //First data value
+
+				xWaxPitch = float.Parse (item.Value.packets [lastPacketIndex].Data [0].ToString ());
+				//198 degrees/sec * 1 = 33rpm
+				rotation = new Vector3 (0, 198 *  xWaxPitch, 0);
+				vinyl.transform.Rotate(rotation*Time.deltaTime);
 			}
-		}			
+		}
+
 	}
+
+
+
 	
 }

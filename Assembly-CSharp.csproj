@@ -51,11 +51,11 @@
      <Compile Include="Assets\OSC\OSCMessage.cs" />
      <Compile Include="Assets\OSC\OSCPacket.cs" />
      <Compile Include="Assets\OSC\OSCServer.cs" />
-     <Compile Include="Assets\OSCHandler.cs" />
-     <Compile Include="Assets\Scripts\Mover.cs" />
      <Compile Include="Assets\Scripts\OSCControl.cs" />
-     <Compile Include="Assets\Scripts\Rotator.cs" />
-     <Compile Include="Assets\Shooter.cs" />
+     <Compile Include="Assets\Scripts\OSCHandler.cs" />
+     <Compile Include="Assets\Scripts\PlayerShooter.cs" />
+     <Compile Include="Assets\Scripts\ShotMover.cs" />
+     <Compile Include="Assets\Scripts\_not used\Rotator.cs" />
      <None Include="Assets\Utility Shaders Free\Shaders\USV1 Preview Blur.shader" />
      <None Include="Assets\Utility Shaders Free\Shaders\USV1 Preview DBlur.shader" />
      <None Include="Assets\Utility Shaders Free\Shaders\USV1 Preview Distort Texture.shader" />
