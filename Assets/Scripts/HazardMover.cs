@@ -7,12 +7,11 @@ public class HazardMover : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		float dir = Random.Range (1, 4);
 
-		if (dir < 1) GetComponent<Rigidbody>().velocity = transform.up * speed;
-		else if (dir < 2) GetComponent<Rigidbody>().velocity = transform.right * speed;
-		else if (dir < 3) GetComponent<Rigidbody>().velocity = transform.up * -speed;
-		else if (dir < 4) GetComponent<Rigidbody>().velocity = transform.right * -speed;
+		//had to Google this as well...ahem ;)
+		//http://answers.unity3d.com/questions/46770/rotate-a-vector3-direction.html
+		Vector3 direction = Quaternion.Euler(0,0,Random.Range(0, 360)) * Vector3.right;
+		GetComponent<Rigidbody> ().velocity = direction * speed;
 	}
 
 }
